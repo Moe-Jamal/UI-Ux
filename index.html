@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo List</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/sweetalert2@11.14.5/dist/sweetalert2.min.css"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <!-- Header -->
+      <div class="header">
+        <div class="header-top">
+          <h1>✨ My Tasks</h1>
+          <div class="stats">
+            <span id="completedCount">0</span> / <span id="totalCount">0</span>
+          </div>
+        </div>
+        <div class="progress-section">
+          <div class="progress-label">
+            <span>Progress</span>
+            <span id="progressPercent">0%</span>
+          </div>
+          <div class="progress-bar">
+            <div class="progress-fill" id="progressFill"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Add Task Form -->
+      <div class="add-task-form">
+        <form id="taskForm" class="form-group">
+          <input
+            type="text"
+            id="taskInput"
+            class="task-input"
+            placeholder="What needs to be done?"
+            autocomplete="off"
+          />
+          <button type="submit" class="add-btn">Add Task</button>
+        </form>
+      </div>
+
+      <!-- Tasks List -->
+      <div class="tasks-container">
+        <div id="emptyState" class="empty-state">
+          <div class="empty-state-icon">📝</div>
+          <p>No tasks yet. Add one to get started!</p>
+        </div>
+        <ul id="taskList" class="task-list p-0"></ul>
+      </div>
+    </div>
+
+    <!-- Loading Overlay -->
+    <div id="loadingOverlay" class="loading-overlay">
+      <div class="loader"></div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="js/index.js"></script>
+  </body>
+</html>
